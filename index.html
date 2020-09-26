@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Vue JS</title>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="app">
+        <div class="product">
+            <div class="product-image">
+                <img :src="image" />
+            </div>
+            <div class="product-info">
+                <h1>{{ product }}</h1>
+                <p v-if="stock > 10">In stock</p>
+                <p v-else-if="stock <= 10 && stock > 0">Almost fiished</p>
+                <p v-else>Out of stock</p>
+                <div v-for="variant in variants" class="color-box" :style="{ 'background-color': variant.material }" @mouseover="updateProductImage(variant.image)">
+                </div>
+                <button @click="addToCart" :disabled="!inStock" :class="{ disabledButton: !inStock }">Add To Cart</button>
+                <div class="cart">
+                    <p>Cart({{ cart }})</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
