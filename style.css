@@ -1,8 +1,10 @@
 .cart {
-    margin-right: 25px;
+    text-align: center;
+    margin-top: 30px;
     float: right;
     border: 1px solid #000000;
-    padding: 5px 20px;
+    height: 40px;
+    width: 120px;
 }
 
 button {
@@ -22,4 +24,18 @@ button {
 
 .disabledButton {
     background-color: #d8d8d8;
+}
+
+.product-image {
+    height: 100px;
+    width: 50px;
+    float: left;
+    margin: 0px;
+    clear: both;
+}
+
+.product-info {
+    float: right;
+    margin: 0px;
+    clear: both;
 }
